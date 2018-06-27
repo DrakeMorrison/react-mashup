@@ -7,8 +7,8 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <AnimalListings className='col-sm-6'/>
-        <NewAnimalForm className='col-sm-6'/>
+        <div className='col-sm-6'><AnimalListings /></div>
+        <div className='col-sm-6'><NewAnimalForm /></div>
       </div>
     );
   }
