@@ -6,7 +6,7 @@ class AnimalListings extends React.Component {
     const {mashups} = this.props;
     const mashupsItems = mashups.map(item => {
       return (
-        <li key={item.id}>
+        <li key={item.id} className="col-sm-4">
           <div class="thumbnail">
             <img src={item.imgUrl} alt="mashup" />
             <div class="caption">
