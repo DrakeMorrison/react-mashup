@@ -1,3 +1,7 @@
 .AnimalListings {
   background-color: blue;
+  li {
+    list-style-type: none;
+    max-height: 20em;
+  }
 }
