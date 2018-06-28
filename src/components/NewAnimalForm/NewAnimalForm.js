@@ -2,6 +2,10 @@ import React from 'react';
 import './NewAnimalForm.css';
 
 class NewAnimalForm extends React.Component {
+  state = {
+    newMashup: {},
+  };
+
   render () {
     return (
       <div className='NewAnimalForm'>
