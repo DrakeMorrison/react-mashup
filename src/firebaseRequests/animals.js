@@ -21,6 +21,20 @@ function getRequest () {
   });
 }
 
+function postRequest (item) {
+  return new Promise((resolve, reject) => {
+    axios
+      .post(`${constants.firebaseConfig.databaseURL}/mashups.json`, item)
+      .then((item) => {
+        resolve(item);
+      })
+      .catch((err) => {
+        reject(err);
+      });
+  });
+}
+
 export default {
   getRequest,
+  postRequest,
 };
