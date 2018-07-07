@@ -17,11 +17,21 @@ class App extends Component {
     }).catch(console.error.bind(console));
   }
 
+  formSubmit = (newMashup) => {
+    listingRequests.postRequest(newMashup)
+      .then((() => {
+        listingRequests.getRequest()
+          .then((mashups) => {
+            this.setState(mashups);
+          });
+      })).catch(console.error.bind(console));
+  };
+
   render () {
     return (
       <div className="App">
         <div className='col-sm-6'><AnimalListings mashups={this.state.mashups}/></div>
-        <div className='col-sm-6'><NewAnimalForm /></div>
+        <div className='col-sm-6'><NewAnimalForm formEvent={this.formSubmit}/></div>
       </div>
     );
   }
