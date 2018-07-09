@@ -41,6 +41,7 @@ class NewAnimalForm extends React.Component {
     ) {
       formEvent(this.state.newMashup);
       this.setState({newMashup: defaultMashup});
+      document.getElementsByClassName('form-horizontal')[0].reset();
     } else {
       alert('Please fill out all the fields');
     }
