@@ -22,7 +22,7 @@ class App extends Component {
       .then((() => {
         listingRequests.getRequest()
           .then((mashups) => {
-            this.setState(mashups);
+            this.setState({mashups});
           });
       })).catch(console.error.bind(console));
   };
